@@ -1,0 +1,27 @@
+.modal {
+  z-index: 2;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalHeader {
+  display: flex;
+  margin-bottom: 24px;
+  flex-direction: row-reverse;
+}
+
+.closeModalBtn {
+  padding: 6px;
+  background: none;
+  cursor: pointer;
+
+  stroke: var(--main);
+
+  & :hover {
+    stroke: var(--text);
+  }
+}

@@ -1,0 +1,21 @@
+:root {
+  --main: #101828;
+  --text: rgba(17, 16, 28, 0.5);
+  --white: #fbfbfb;
+  --inputs: #fbfbfb;
+  --badges: #f2f4f7;
+
+  --gray: #6c717b;
+  --gray-light: #dadde1;
+  --button: #e44848;
+  --button-hover: #d84343;
+  --rating: #ffc531;
+
+  --font-family: 'Helvetica Neue', sans-serif;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--text);
+}

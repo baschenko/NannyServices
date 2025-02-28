@@ -1,0 +1,93 @@
+.wrapperCard {
+  display: flex;
+
+  border: 1px solid var(--gray-light);
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  height: 368px;
+}
+
+.wrapperImg {
+  overflow: hidden;
+
+  position: relative;
+
+  border-radius: 10px;
+  width: 292px;
+  height: 320px;
+
+  margin-right: 24px;
+}
+
+.image {
+  height: 320px;
+
+  position: absolute;
+  right: -60px;
+}
+
+.wrapperDescription {
+  width: 524px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  line-height: 1.33;
+  color: var(--main);
+
+  margin-bottom: 8px;
+}
+
+.cardTitle {
+  font-size: 24px;
+}
+
+.wrapperPrice {
+  display: flex;
+}
+
+.cardHeart {
+  background: none;
+  color: #101828;
+  padding: 0;
+
+  &:hover {
+    color: #e44848;
+  }
+}
+
+.favorite {
+  color: #e44848;
+}
+
+.icon {
+  fill: currentColor;
+}
+
+.cardDescription {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 525px;
+  margin-bottom: 24px;
+}
+
+.link {
+  display: block;
+  letter-spacing: -0.01em;
+  color: var(--white);
+
+  padding: 16px;
+  border-radius: 200px;
+  width: 166px;
+
+  text-align: center;
+  background-color: var(--button);
+}
+
+.link:hover {
+  background-color: var(--button-hover);
+}

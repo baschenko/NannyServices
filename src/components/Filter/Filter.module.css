@@ -1,0 +1,97 @@
+.wrapper {
+  width: 360px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  color: var(--gray);
+}
+
+.iconWrapper {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  left: 18px;
+  top: 26px;
+  pointer-events: none;
+}
+
+.input {
+  border-radius: 12px;
+  padding: 16px 20px 16px 46px;
+  width: 100%;
+  background: var(--inputs);
+  margin-top: 8px;
+  border: none;
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+}
+
+.subTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.filtersBlock {
+  border-top: 2px solid var(--gray-light);
+  padding-top: 24px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 12px;
+
+  & label {
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    padding: 16px;
+    width: 112px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+  }
+  & input[type='checkbox'] {
+    display: none;
+  }
+
+  & input[type='radio'] {
+    display: none;
+  }
+  & svg {
+    margin-bottom: 8px;
+  }
+
+  & .active {
+    border-color: var(--button);
+  }
+}
+
+.btnFilter {
+  background: none;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.btn {
+  width: 166px;
+  margin-top: 16px;
+}

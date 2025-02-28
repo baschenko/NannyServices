@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  border-radius: 100px;
+  padding: 12px 18px;
+  background: var(--badges);
+
+  line-height: 1.25;
+  color: var(--main);
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  &:hover {
+    background: var(--gray-light);
+  }
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.text {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.text::first-letter {
+  text-transform: uppercase;
+}

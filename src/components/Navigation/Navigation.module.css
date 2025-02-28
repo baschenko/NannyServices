@@ -1,0 +1,17 @@
+.navigation {
+  margin: 0 auto;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 24px 0;
+  font-weight: 700;
+  color: var(--main);
+  margin-right: 32px;
+}
+
+.active {
+  composes: link;
+  color: var(--button-hover);
+}

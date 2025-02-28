@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  padding: 48px 64px;
+  justify-content: space-between;
+  padding-top: 120px;
+}
+
+.catalog {
+  text-align: center;
+}
+
+.listCards {
+  margin-bottom: 40px;
+}
