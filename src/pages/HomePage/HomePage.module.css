@@ -1,5 +1,5 @@
 .section {
-  background: #103931;
+  background: var(--main);
   background-image: url(../../images/Hero_image.jpg);
   background-repeat: no-repeat;
   width: 1376px;
@@ -10,6 +10,7 @@
 
 .container {
   padding: 251px 96px 163px 96px;
+  position: relative;
 }
 
 .wrapper {
@@ -56,4 +57,39 @@
 
 .btn:hover {
   background-color: var(--button-hover);
+}
+
+.counter {
+  border-radius: 20px;
+  padding: 32px;
+  width: 284px;
+  height: 118px;
+
+  background-color: var(--white);
+
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+
+  display: flex;
+}
+
+.jackdaw {
+  border-radius: 13px;
+  width: 54px;
+  height: 54px;
+  padding: 12px;
+  margin-right: 16px;
+
+  background-color: var(--main);
+}
+
+.textCounter {
+  margin-bottom: 6px;
+}
+
+.valueCounter {
+  font-weight: 700;
+  font-size: 24px;
+  color: #11101c;
 }

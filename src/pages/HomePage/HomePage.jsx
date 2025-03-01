@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import css from './HomePage.module.css';
+import Icon from '../../components/Icon/Icon.jsx';
 
 const HomePage = () => {
   return (
@@ -14,6 +15,18 @@ const HomePage = () => {
         <Link to={'/nannies'} className={css.btn}>
           Get started
         </Link>
+        <div className={css.counter}>
+          <Icon
+            id="icon-jackdaw"
+            width={30}
+            height={30}
+            className={css.jackdaw}
+          />
+          <div>
+            <p className={css.textCounter}>Experienced nannies</p>
+            <p className={css.valueCounter}>15,000</p>
+          </div>
+        </div>
       </div>
     </div>
   );
