@@ -1,17 +1,31 @@
 .navigation {
-  margin: 0 auto;
+  margin-right: 90px;
 }
 
 .link {
   display: inline-block;
   text-decoration: none;
   padding: 24px 0;
-  font-weight: 700;
-  color: var(--main);
-  margin-right: 32px;
+  color: var(--white);
+  margin-right: 40px;
+
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .active {
   composes: link;
-  color: var(--button-hover);
+  /* color: var(--button-hover); */
+  position: relative;
+
+  &::after {
+    content: url('data:image/svg+xml;charset=UTF-8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="white" /></svg>');
+
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+  }
 }

@@ -1,0 +1,10 @@
+.btnWrapper {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brnRegistration {
+  background-color: var(--main);
+}

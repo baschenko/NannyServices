@@ -18,9 +18,9 @@ export default function Navigation() {
           Nannies
         </NavLink>
 
-        <NavLink className={buildLinkClass} to="/favorite">
+        {/* <NavLink className={buildLinkClass} to="/favorite">
           Favorite
-        </NavLink>
+        </NavLink> */}
       </nav>
     </>
   );

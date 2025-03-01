@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation.jsx';
 import css from './AppBar.module.css';
+import UserAuth from '../UserAuth/UserAuth.jsx';
 
 export default function AppBar() {
   return (
@@ -8,7 +9,10 @@ export default function AppBar() {
       <NavLink to="/" className={css.logo}>
         <div>Nanny.Services</div>
       </NavLink>
-      <Navigation />
+      <div className={css.wrapper}>
+        <Navigation />
+        <UserAuth />
+      </div>
     </header>
   );
 }
