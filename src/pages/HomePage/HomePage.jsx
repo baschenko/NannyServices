@@ -1,8 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import css from './HomePage.module.css';
 import Icon from '../../components/Icon/Icon.jsx';
+import clsx from 'clsx';
 
 const HomePage = () => {
+  const location = useLocation();
+
+  console.log('location: ', location.pathname === '/');
+
   return (
     <div className={css.section}>
       <div className={css.container}>
