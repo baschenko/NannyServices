@@ -2,7 +2,7 @@ export const selectLoading = state => state.nannies.isLoading;
 
 export const selectFilter = state => state.filters.value;
 
-export const selectAllnannies = state => state.nannies.items;
+export const selectAllNannies = state => state.nannies.items;
 
 export const selectNannie = state => state.nannies.nannie;
 

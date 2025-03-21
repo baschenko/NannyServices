@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  selectAllnannies,
+  // selectAllNannies,
   selectFilter,
   selectPage,
   selectPerPage,
@@ -13,9 +13,10 @@ import { useEffect, useState } from 'react';
 import Button from '../../components/Button/Button.jsx';
 import { fetchNannies } from '../../redux/nannies/operations.js';
 import { clearItems, setPage } from '../../redux/nannies/slice.js';
+import nannies from '../../assets/babysitters.json';
 
 const NanniesPage = () => {
-  const nannies = useSelector(selectAllnannies);
+  // const nannies = useSelector(selectAllNannies);
   const total = useSelector(selectTotal);
   const perPage = useSelector(selectPerPage);
   const totalPage = Math.ceil(total / perPage);

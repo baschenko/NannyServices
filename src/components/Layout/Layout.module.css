@@ -1,8 +1,17 @@
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 100%;
+  /* background-color: var(--main); */
+  /* height: 88px; */
 }
 
 .isHomePage {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: none;
   padding: 32px;
+}
+
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
 }

@@ -17,8 +17,10 @@ export default function Layout({ children }) {
     <>
       {isLoading && <Loader />}
       <div className={buildContainerClass()}>
-        <AppBar />
-        {children}
+        <div className={location.pathname !== '/' && css.wrapper}>
+          <AppBar />
+          {children}
+        </div>
       </div>
     </>
   );
