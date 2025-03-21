@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import imagesDefault from '../../images/default.png';
-import Categories from '../Categories/Categories.jsx';
 import Icon from '../Icon/Icon.jsx';
 import css from './NannieCard.module.css';
 import RatingAndLocation from '../RatingAndLocation/RatingAndLocation.jsx';
@@ -17,11 +16,13 @@ const NannieCard = ({ nannie }) => {
   const dispatch = useDispatch();
   const favoriteItems = useSelector(selectFavoriteItems);
 
-  const isFavorite = favoriteItems.find(favorite => favorite.id === nannie.id);
+  const isFavorite = favoriteItems.find(
+    favorite => favorite.name === nannie.name
+  );
 
   const handleClick = () => {
     if (isFavorite) {
-      dispatch(deleteFromFavorite(nannie.id));
+      dispatch(deleteFromFavorite(nannie.name));
       return;
     }
     dispatch(addToFavorite(nannie));
@@ -32,11 +33,7 @@ const NannieCard = ({ nannie }) => {
       <div className={css.wrapperImg}>
         <img
           className={css.image}
-          src={
-            nannie.gallery[0].thumb !== null
-              ? nannie.gallery[0].thumb
-              : imagesDefault
-          }
+          src={nannie.avatar_url !== null ? nannie.avatar_url : imagesDefault}
           alt={nannie.name}
           height="320"
         />
@@ -45,7 +42,7 @@ const NannieCard = ({ nannie }) => {
         <div className={css.cardHeader}>
           <h2 className={css.cardTitle}>{nannie.name}</h2>
           <div className={css.wrapperPrice}>
-            <Price price={nannie.price} />
+            <Price price={nannie.price_per_hour} />
             <button
               aria-label="Heart button"
               className={clsx(css.cardHeart, isFavorite && css.favorite)}
@@ -62,15 +59,15 @@ const NannieCard = ({ nannie }) => {
         </div>
 
         <RatingAndLocation
-          id={nannie.id}
+          id={nannie.name}
           rating={nannie.rating}
           numberReviews={nannie.reviews.length}
           location={nannie.location}
           className=""
         />
 
-        <p className={css.cardDescription}>{nannie.description}</p>
-        <Categories nannie={nannie} />
+        <p className={css.cardDescription}>{nannie.about}</p>
+
         <Link className={css.link} to={`/catalog/${nannie.id}/features`}>
           Show more
         </Link>

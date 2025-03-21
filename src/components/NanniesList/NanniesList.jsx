@@ -3,7 +3,7 @@ import css from './NanniesList.module.css';
 
 const NanniesList = ({ nannies }) => {
   return nannies.map(nannie => (
-    <li key={nannie.id} className={css.itemCard}>
+    <li key={nannie.name} className={css.itemCard}>
       <NannieCard nannie={nannie} />
     </li>
   ));
