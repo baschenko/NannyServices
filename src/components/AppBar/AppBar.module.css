@@ -15,6 +15,7 @@
 .isNotHome {
   background-color: var(--main);
   position: fixed;
+  padding: 30px 128px;
 }
 
 .logo {
