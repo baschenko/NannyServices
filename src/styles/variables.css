@@ -1,9 +1,11 @@
 :root {
   --main: #103931;
   --text: rgba(17, 16, 28, 0.5);
+  --title: #11101c;
   --white: #fbfbfb;
   --inputs: #fbfbfb;
   --badges: #f2f4f7;
+  --green: #38cd3e;
 
   --gray: #8a8a89;
   --gray-light: #dadde1;

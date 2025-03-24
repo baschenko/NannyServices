@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 import imagesDefault from '../../images/default.png';
 import Icon from '../Icon/Icon.jsx';
 import css from './NannieCard.module.css';
-import RatingAndLocation from '../RatingAndLocation/RatingAndLocation.jsx';
-import Price from '../Price/Price.jsx';
+import InfoNannie from '../InfoNannie/InfoNannie.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   addToFavorite,
@@ -40,9 +39,19 @@ const NannieCard = ({ nannie }) => {
       </div>
       <div className={css.wrapperDescription}>
         <div className={css.cardHeader}>
-          <h2 className={css.cardTitle}>{nannie.name}</h2>
+          <div className={css.wrapperTitle}>
+            <p className={css.cardSubTitle}>Nanny</p>
+            <h2 className={css.cardTitle}>{nannie.name}</h2>
+          </div>
           <div className={css.wrapperPrice}>
-            <Price price={nannie.price_per_hour} />
+            <InfoNannie
+              id={nannie.name}
+              rating={nannie.rating}
+              location={nannie.location}
+              price={nannie.price_per_hour}
+              className=""
+            />
+
             <button
               aria-label="Heart button"
               className={clsx(css.cardHeart, isFavorite && css.favorite)}
@@ -57,14 +66,6 @@ const NannieCard = ({ nannie }) => {
             </button>
           </div>
         </div>
-
-        <RatingAndLocation
-          id={nannie.name}
-          rating={nannie.rating}
-          numberReviews={nannie.reviews.length}
-          location={nannie.location}
-          className=""
-        />
 
         <p className={css.cardDescription}>{nannie.about}</p>
 

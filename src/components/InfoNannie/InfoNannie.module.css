@@ -1,0 +1,52 @@
+.wrapperReviews {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+}
+
+.item {
+  margin-right: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 32px;
+
+    &::after {
+      content: url("data:image/svg+xml;charset=UTF-8,<svg width='2' height='16' viewBox='0 0 2 16' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 0V16' stroke='%2311101c' stroke-opacity='0.2' /></svg>");
+      position: absolute;
+      height: 16px;
+      right: -16px;
+    }
+  }
+}
+
+.map {
+  margin-right: 4px;
+}
+
+.line {
+  /* padding: 4px 16px; */
+  /* stroke-width: 1px; */
+  /* stroke: rgba(17, 16, 28, 0.2); */
+  transform: rotate(90deg);
+}
+
+.star {
+  fill: var(--rating);
+  margin-right: 8px;
+}
+
+.cardReviews {
+  color: var(--main);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.cardPrice {
+  color: var(--green);
+}

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, Outlet, useParams } from 'react-router-dom';
-import RatingAndLocation from '../../components/RatingAndLocation/RatingAndLocation.jsx';
+import InfoNannie from '../../components/InfoNannie/InfoNannie.jsx';
 import Price from '../../components/Price/Price.jsx';
 import { Suspense, useEffect, useState } from 'react';
 import { InfinitySpin } from 'react-loader-spinner';
@@ -38,7 +38,7 @@ const NanniesCardsPage = () => {
     nannie && (
       <div className={css.container}>
         <h2 className={css.title}>{nannie.name}</h2>
-        <RatingAndLocation
+        <InfoNannie
           id={nannieId}
           rating={nannie.rating}
           numberReviews={nannie.reviews.length}

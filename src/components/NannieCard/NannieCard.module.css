@@ -24,14 +24,9 @@
 }
 
 .image {
-  /* height: 320px; */
-
   border-radius: 15px;
   width: 96px;
   height: 96px;
-
-  /* position: absolute;
-  right: -60px; */
 }
 
 .wrapperDescription {
@@ -41,10 +36,22 @@
 .cardHeader {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   font-weight: 600;
   line-height: 1.33;
   color: var(--main);
 
+  margin-bottom: 24px;
+}
+
+.wrapperTitle {
+  text-align: left;
+}
+
+.cardSubTitle {
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--gray);
   margin-bottom: 8px;
 }
 
