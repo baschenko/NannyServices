@@ -1,13 +1,17 @@
-import clsx from 'clsx';
 import Icon from '../Icon/Icon.jsx';
 import css from './InfoNannie.module.css';
 import { Link } from 'react-router-dom';
 
-const InfoNannie = ({ id, rating, location, price, className = '' }) => {
+const InfoNannie = ({ id, rating, location, price }) => {
   return (
-    <ul className={clsx(css.wrapperReviews, className)}>
+    <ul className={css.wrapperReviews}>
       <li className={css.item}>
-        <Icon id="icon-location" width={16} height={16} className={css.map} />
+        <Icon
+          id="icon-location"
+          width={16}
+          height={16}
+          className={css.location}
+        />
         {location}
       </li>
       <li className={css.item}>

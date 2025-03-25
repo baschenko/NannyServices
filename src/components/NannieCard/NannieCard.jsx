@@ -10,10 +10,20 @@ import {
 } from '../../redux/nannies/slice.js';
 import { selectFavoriteItems } from '../../redux/nannies/selectors.js';
 import clsx from 'clsx';
+import Summary from '../Summary/Summary.jsx';
 
 const NannieCard = ({ nannie }) => {
   const dispatch = useDispatch();
   const favoriteItems = useSelector(selectFavoriteItems);
+
+  const calculateAge = birthday => {
+    const ageDifMs = Date.now() - birthday.getTime();
+    const ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  };
+
+  const birthday = new Date(nannie.birthday);
+  const newAge = calculateAge(birthday);
 
   const isFavorite = favoriteItems.find(
     favorite => favorite.name === nannie.name
@@ -49,7 +59,6 @@ const NannieCard = ({ nannie }) => {
               rating={nannie.rating}
               location={nannie.location}
               price={nannie.price_per_hour}
-              className=""
             />
 
             <button
@@ -66,11 +75,22 @@ const NannieCard = ({ nannie }) => {
             </button>
           </div>
         </div>
-
+        <Summary
+          age={newAge}
+          experience={nannie.experience}
+          kidsAge={nannie.kids_age}
+          characters={nannie.characters
+            .map(
+              character =>
+                character.charAt(0).toUpperCase() + character.slice(1)
+            )
+            .join(', ')}
+          education={nannie.education}
+        />
         <p className={css.cardDescription}>{nannie.about}</p>
 
         <Link className={css.link} to={`/catalog/${nannie.id}/features`}>
-          Show more
+          Read more
         </Link>
       </div>
 

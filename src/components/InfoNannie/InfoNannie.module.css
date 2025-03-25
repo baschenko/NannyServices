@@ -23,15 +23,8 @@
   }
 }
 
-.map {
-  margin-right: 4px;
-}
-
-.line {
-  /* padding: 4px 16px; */
-  /* stroke-width: 1px; */
-  /* stroke: rgba(17, 16, 28, 0.2); */
-  transform: rotate(90deg);
+.location {
+  margin-right: 8px;
 }
 
 .star {

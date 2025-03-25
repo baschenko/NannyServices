@@ -1,8 +1,6 @@
 .container {
-  /* display: flex; */
   padding: 152px 128px;
   justify-content: space-between;
-  /* padding-top: 120px; */
 }
 
 .catalog {
