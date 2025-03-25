@@ -17,7 +17,7 @@
 
 .reactSelect {
   margin-top: 8px;
-
+  width: 226px;
   [class$='-control'] {
     border-radius: 14px;
     padding: 0px 18px;
