@@ -16,32 +16,33 @@ const NanniesCardsPage = lazy(() =>
 export default function App() {
   return (
     <>
-      <Toaster
-        position="top-center"
-        toastOptions={{
-          duration: 5000,
-          style: {
-            background: 'var(--white)',
-            color: 'var(--text)',
-          },
-        }}
-      />
-
-      <Layout>
-        <Suspense fallback={null}>
-          <Routes>
+      {/* <Layout> */}
+      <Suspense
+        fallback={
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              duration: 5000,
+              style: {
+                background: 'var(--white)',
+                color: 'var(--text)',
+              },
+            }}
+          />
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
 
             <Route path="/nannies" element={<NanniesPage />} />
-            <Route path="/nannies/:nannieId" element={<NanniesCardsPage />}>
-              {/* <Route path="features" element={<NanniesFeatures />} />
-              <Route path="reviews" element={<NanniesReviews />} /> */}
-            </Route>
+            <Route path="/nannies/:nannieId" element={<NanniesCardsPage />} />
             <Route path="/favorite" element={<FavoritePage />} />
             <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Suspense>
-      </Layout>
+          </Route>
+        </Routes>
+      </Suspense>
+      {/* </Layout> */}
     </>
   );
 }

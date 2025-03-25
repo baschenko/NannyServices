@@ -1,0 +1,86 @@
+.wrapper {
+  display: flex;
+}
+
+.wrapperImg {
+  border: 2px solid rgba(240, 63, 59, 0.2);
+  border-radius: 30px;
+  width: 120px;
+  height: 120px;
+  padding: 12px;
+
+  margin-right: 24px;
+  position: relative;
+
+  &::after {
+    content: url("data:image/svg+xml;charset=UTF-8,<svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='7' cy='7' r='7' fill='%23fbfbfb' /><circle cx='6.99992' cy='7.0001' r='4.66667' fill='%2338cd3e' /></svg>");
+    position: absolute;
+    left: 92px;
+    top: 9px;
+    height: 14px;
+    width: 14px;
+  }
+}
+
+.image {
+  border-radius: 15px;
+  width: 96px;
+  height: 96px;
+}
+
+.wrapperDescription {
+  text-align: left;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-weight: 600;
+  line-height: 1.33;
+  color: var(--main);
+
+  margin-bottom: 24px;
+}
+
+.wrapperTitle {
+  text-align: left;
+}
+
+.cardSubTitle {
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.cardTitle {
+  font-size: 24px;
+}
+
+.wrapperPrice {
+  display: flex;
+}
+
+.cardHeart {
+  background: none;
+  color: #101828;
+  padding: 0;
+
+  &:hover {
+    color: #e44848;
+  }
+}
+
+.favorite {
+  color: #e44848;
+}
+
+.icon {
+  fill: currentColor;
+}
+
+.cardDescription {
+  text-align: left;
+  margin-bottom: 14px;
+}
