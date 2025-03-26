@@ -1,5 +1,5 @@
 .navigation {
-  margin-right: 90px;
+  margin-right: 92px;
 }
 
 .link {
@@ -11,6 +11,10 @@
 
   font-weight: 400;
   letter-spacing: -0.01em;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .active {

@@ -1,6 +1,10 @@
 .container {
-  padding: 152px 128px;
-  justify-content: space-between;
+  /* padding: 152px 128px;
+  
+  justify-content: space-between; */
+  padding-top: 152px;
+  width: 1184px;
+  margin: auto;
 }
 
 .catalog {

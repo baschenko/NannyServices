@@ -18,10 +18,10 @@ export default function Layout() {
           location.pathname === '/' && css.isHomePage,
         ].join(' ')}
       >
-        <div className={location.pathname !== '/' && css.wrapper}>
-          <AppBar />
-          {/* {children} */}
-        </div>
+        {/* <div className={location.pathname !== '/' && css.wrapper}> */}
+        <AppBar />
+        {/* {children} */}
+        {/* </div> */}
       </div>
     </>
   );
