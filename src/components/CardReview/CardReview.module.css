@@ -5,16 +5,18 @@
 }
 
 .avatar {
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.33;
-  color: var(--button);
+  font-size: 20px;
+  line-height: 1;
+  color: var(--main);
+  text-align: center;
 
-  padding: 13px 21px;
-  margin-right: 16px;
+  width: 44px;
+  height: 44px;
 
-  border-radius: 60px;
+  padding: 14px 12px;
+  margin-right: 12px;
+
+  border-radius: 100px;
 
   background: var(--badges);
 }
@@ -23,15 +25,18 @@
   color: var(--main);
   margin-bottom: 4px;
 }
-.listStar {
-  display: flex;
-}
 
-.itemStar {
-  margin-right: 4px;
+.raiting {
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--title);
 }
 .star {
   fill: var(--rating);
+  margin-right: 8px;
 }
 
 .starDisable {

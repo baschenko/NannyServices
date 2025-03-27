@@ -19,7 +19,6 @@
 
 .active {
   composes: link;
-  /* color: var(--button-hover); */
   position: relative;
 
   &::after {

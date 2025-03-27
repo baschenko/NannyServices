@@ -1,7 +1,10 @@
 .wrapper {
   width: 631px;
+  margin-left: 144px;
+  margin-top: 34px;
+  margin-bottom: 48px;
 }
 
 .itemReview {
-  margin-bottom: 44px;
+  margin-bottom: 25px;
 }
