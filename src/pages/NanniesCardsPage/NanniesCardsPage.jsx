@@ -71,7 +71,7 @@ const NanniesCardsPage = () => {
             closeModal={closeModal}
             src={modalUrl}
           >
-            <BookingForm nannie={nannie} />
+            <BookingForm nannie={nannie} closeModal={closeModal} />
           </LayoutModal>
         </div>
       </div>

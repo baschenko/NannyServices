@@ -5,7 +5,7 @@ import Button from '../Button/Button.jsx';
 import toast from 'react-hot-toast';
 import imagesDefault from '../../images/default.png';
 
-const BookingForm = ({ nannie }) => {
+const BookingForm = ({ nannie, closeModal }) => {
   const emailRegexp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -34,13 +34,17 @@ const BookingForm = ({ nannie }) => {
   });
 
   const initialValues = {
-    name: '',
+    address: '',
+    phone: '',
+    child_age: '',
+    time: '',
     email: '',
-    date: '',
+    name: '',
     comment: '',
   };
 
   const handleSubmit = values => {
+    closeModal();
     console.log(values);
     toast.success('Successfully booked');
   };
