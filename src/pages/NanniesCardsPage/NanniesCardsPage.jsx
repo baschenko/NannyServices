@@ -19,7 +19,6 @@ const NanniesCardsPage = () => {
   const nannie = nannies.find(nannie => nannie.name === nannieId);
 
   const [showModal, setShowModal] = useState(false);
-  const [modalUrl, setModalUrl] = useState('');
 
   // const dispatch = useDispatch();
 
@@ -29,14 +28,12 @@ const NanniesCardsPage = () => {
 
   // const nannie = useSelector(selectNannie);
 
-  const openModal = url => {
+  const openModal = () => {
     setShowModal(true);
-    setModalUrl(url);
   };
 
   const closeModal = () => {
     setShowModal(false);
-    setModalUrl('');
   };
 
   return (
@@ -49,28 +46,7 @@ const NanniesCardsPage = () => {
             Make an appointment
           </Button>
 
-          <div className={css.wrapperBooking}>
-            {/* <div className={css.wrapperFeatures}>
-                <Suspense
-                  fallback={
-                    <InfinitySpin
-                      visible={true}
-                      width="200"
-                      color="#4fa94d"
-                      ariaLabel="infinity-spin-loading"
-                    />
-                  }
-                >
-                  <Outlet />
-                </Suspense>
-              </div> */}
-            {/* <BookingForm /> */}
-          </div>
-          <LayoutModal
-            modalIsOpen={showModal}
-            closeModal={closeModal}
-            src={modalUrl}
-          >
+          <LayoutModal modalIsOpen={showModal} closeModal={closeModal}>
             <BookingForm nannie={nannie} closeModal={closeModal} />
           </LayoutModal>
         </div>
