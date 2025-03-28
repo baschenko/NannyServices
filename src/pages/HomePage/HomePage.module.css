@@ -42,7 +42,7 @@
 
   border: 1px solid rgba(251, 251, 251, 0.4);
   border-radius: 30px;
-  padding: 18px 50px;
+  padding: 18px 46px;
   width: 230px;
   height: 60px;
 
@@ -53,10 +53,17 @@
   color: var(--white);
 
   text-align: center;
+
+  &:hover {
+    & .arrow {
+      transform: rotate(0deg);
+    }
+  }
 }
 
-.btn:hover {
-  background-color: var(--button-hover);
+.arrow {
+  margin-left: 18px;
+  transform: rotate(-45deg);
 }
 
 .counter {

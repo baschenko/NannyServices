@@ -18,6 +18,7 @@ const HomePage = () => {
         </div>
         <Link to={'/nannies'} className={css.btn}>
           Get started
+          <Icon id="icon-arrow" width={20} height={16} className={css.arrow} />
         </Link>
         <div className={css.counter}>
           <Icon
