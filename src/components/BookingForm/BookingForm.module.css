@@ -1,46 +1,105 @@
 .wrapper {
-  border: 1px solid var(--gray-light);
-  border-radius: 10px;
-  padding: 44px 57px;
-  width: 641px;
-  margin-left: 40px;
+  /* border: 1px solid var(--gray-light); */
+  /* border-radius: 10px; */
+  /* padding: 44px 57px; */
+  /* margin-left: 40px; */
+
+  width: 472px;
+  text-align: left;
 }
 
 .title {
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 40px;
   line-height: 1.2;
-  color: var(--main);
+  letter-spacing: -0.02em;
+  color: var(--title);
 
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
 .text {
-  color: var(--gray);
-  margin-bottom: 24px;
-}
-
-.form {
-  text-align: center;
-}
-
-.input {
-  border-radius: 12px;
-  padding: 18px;
-  width: 100%;
-  background: var(--inputs);
-  border: none;
-  margin-bottom: 14px;
-
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
+  line-height: 1.25;
+  color: var(--text);
+
+  margin-bottom: 40px;
+}
+
+.card {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.image {
+  border-radius: 15px;
+  width: 44px;
+  height: 44px;
+  margin-right: 14px;
+}
+
+.wrapperTitle {
+  text-align: left;
+}
+
+.cardSubTitle {
+  font-size: 12px;
+  line-height: 1.33;
+
+  margin-bottom: 4px;
+}
+
+.cardTitle {
+  font-weight: 500;
+  font-size: 16px;
   line-height: 1.5;
-  color: var(--gray);
+  color: var(--title);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 232px);
+  gap: 16px 8px;
+  width: 472px;
+}
+
+.fieldGroup {
+  grid-column: span 2;
+}
+
+.input {
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 232px;
+  height: 52px;
+
+  font-size: 16px;
+  color: var(--title);
+
+  &::placeholder {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--title);
+  }
+}
+
+.wide {
+  width: 472px; /* 3-й и 4-й ряды */
+}
+
+.tall {
+  width: 472px;
+  height: 116px; /* 5-й ряд */
 }
 
 textarea.input {
-  width: 527px;
-  height: 118px;
+  /* width: 100%; */
+  /* height: 116px; */
   resize: none;
   margin-bottom: 24px;
 }
@@ -56,4 +115,10 @@ textarea.input {
 
 .btn {
   width: 166px;
+  border-radius: 30px;
+  padding: 16px 217px;
+  width: 472px;
+  height: 52px;
+
+  background: #103931;
 }

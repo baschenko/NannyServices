@@ -2,20 +2,16 @@
   z-index: 2;
 }
 
-.description {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .modalHeader {
   display: flex;
-  margin-bottom: 24px;
   flex-direction: row-reverse;
+
+  margin-top: 12px;
+  padding: 0px 44px 44px 44px;
 }
 
 .closeModalBtn {
-  padding: 6px;
+  padding: 8px;
   background: none;
   cursor: pointer;
 

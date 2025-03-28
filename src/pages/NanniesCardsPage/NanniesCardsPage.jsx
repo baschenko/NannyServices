@@ -7,8 +7,8 @@ import { useState } from 'react';
 // import { getNannieInfo } from '../../redux/nannies/operations.js';
 // import { selectNannie } from '../../redux/nannies/selectors.js';
 import css from './NanniesCardsPage.module.css';
-// import BookingForm from '../../components/BookingForm/BookingForm.jsx';
-import ImageModal from '../../components/ImageModal/ImageModal.jsx';
+import BookingForm from '../../components/BookingForm/BookingForm.jsx';
+import LayoutModal from '../../components/LayoutModal/LayoutModal.jsx';
 import nannies from '../../assets/babysitters.json';
 import NannieProfile from '../../components/NannieProfile/NannieProfile.jsx';
 import NanniesReviews from '../../components/NanniesReviews/NanniesReviews.jsx';
@@ -29,10 +29,10 @@ const NanniesCardsPage = () => {
 
   // const nannie = useSelector(selectNannie);
 
-  // const openModal = url => {
-  //   setShowModal(true);
-  //   setModalUrl(url);
-  // };
+  const openModal = url => {
+    setShowModal(true);
+    setModalUrl(url);
+  };
 
   const closeModal = () => {
     setShowModal(false);
@@ -45,7 +45,9 @@ const NanniesCardsPage = () => {
         <div className={css.container}>
           <NannieProfile nannie={nannie} />
           <NanniesReviews nannie={nannie} />
-          <Button className={css.btn}>Make an appointment</Button>
+          <Button className={css.btn} onClick={openModal}>
+            Make an appointment
+          </Button>
 
           <div className={css.wrapperBooking}>
             {/* <div className={css.wrapperFeatures}>
@@ -64,11 +66,13 @@ const NanniesCardsPage = () => {
               </div> */}
             {/* <BookingForm /> */}
           </div>
-          <ImageModal
+          <LayoutModal
             modalIsOpen={showModal}
             closeModal={closeModal}
             src={modalUrl}
-          />
+          >
+            <BookingForm nannie={nannie} />
+          </LayoutModal>
         </div>
       </div>
     )
