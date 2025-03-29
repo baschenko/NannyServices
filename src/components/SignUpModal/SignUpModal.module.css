@@ -1,0 +1,68 @@
+.wrapper {
+  width: 438px;
+  text-align: left;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--title);
+
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-bottom: 40px;
+}
+
+.form {
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 232px); */
+  /* gap: 8px; */
+  /* width: 472px; */
+}
+
+.fieldGroup {
+}
+
+.input {
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 438px;
+  height: 52px;
+
+  font-size: 16px;
+  color: var(--title);
+
+  margin-bottom: 8px;
+
+  &::placeholder {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--title);
+  }
+}
+
+.errorMessage {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--button);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 16px;
+  width: 438px;
+  height: 52px;
+
+  background: #103931;
+  margin-top: 32px;
+}
