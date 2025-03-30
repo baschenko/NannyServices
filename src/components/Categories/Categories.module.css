@@ -1,8 +1,0 @@
-.wrapperCategories {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-  height: 104px;
-  white-space: nowrap;
-  overflow: hidden;
-}

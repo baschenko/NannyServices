@@ -3,8 +3,16 @@ import * as Yup from 'yup';
 import Button from '../Button/Button.jsx';
 import css from './SignUpModal.module.css';
 import toast from 'react-hot-toast';
+import { useState } from 'react';
+import Icon from '../Icon/Icon.jsx';
 
 const SignUpModal = ({ closeModal }) => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(prev => !prev);
+  };
+
   const emailRegexp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   const validationSchema = Yup.object().shape({
@@ -71,19 +79,32 @@ const SignUpModal = ({ closeModal }) => {
             component="div"
             className={css.errorMessage}
           />
-
-          <Field
-            id="password"
-            name="password"
-            type="text"
-            placeholder="Password"
-            className={css.input}
-          />
-          <ErrorMessage
-            name="password"
-            component="div"
-            className={css.errorMessage}
-          />
+          <div className={css.passwordWrapper}>
+            <Field
+              id="password"
+              name="password"
+              type={showPassword ? 'text' : 'password'}
+              placeholder="Password"
+              className={css.input}
+            />
+            <ErrorMessage
+              name="password"
+              component="div"
+              className={css.errorMessage}
+            />
+            <Button
+              type="button"
+              className={css.eyeBtn}
+              onClick={togglePasswordVisibility}
+              aria-label="Toggle password visibility"
+            >
+              {showPassword ? (
+                <Icon id="icon-eye" width={20} height={20} />
+              ) : (
+                <Icon id="icon-eye-off" width={20} height={20} />
+              )}
+            </Button>
+          </div>
 
           <Button type="submit" className={css.btn}>
             Sign Up
